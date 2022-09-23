@@ -8,7 +8,22 @@
 // 3 Em duas vezes, preço normal de etiqueta sem juros
 // 4 Em três vezes, preço normal de etiqueta mais juros de 10%
 
-const precoProduto = parseFloat(prompt('qual o preço do produto?'))
+//--------------------------------------
+//Estruturas de repetição
+// São estruturas que nos permitem repetir partes do nosso codigo de maneira mais simples.
+//While - Enquanto
+//
+
+// -----------------------------------
+
+let precoProduto = parseFloat(prompt('qual o preço do produto?'))
+
+while(isNaN(precoProduto) == true || precoProduto <= 0){
+    alert('preço inválido! digite apenas números, por favor')
+    precoProduto = parseFloat(prompt('qual o preço do produto?'))
+
+}
+
 const mensagem = `
 informe o método de pagamento: 
 Digite 1 para pagamento em dinheiro
@@ -16,10 +31,16 @@ Digite 2 para pagamento em cheque
 Digite 3 para pagamento em cartão
 `
 
-const metodoDePagamento = prompt(mensagem)
+let metodoDePagamento = prompt(mensagem)
 
 console.log(precoProduto)
 console.log(metodoDePagamento)
+
+while(metodoDePagamento >= 4 || metodoDePagamento <= 0 ) {
+    alert('metodo inválido, digite um numero entre 1 e 3')
+    metodoDePagamento = prompt(mensagem)
+
+}
 
 if (metodoDePagamento == 1 || metodoDePagamento == 2 ){
     const precoFinal = precoProduto * 0.9
