@@ -9,9 +9,6 @@ for (const num of numeros) {
     }
   }
 
-//   for(let num of numeros){
-//     soma =+ num 
-//   }
 let somaPos = positivos.reduce((somaPos, currentElement) => somaPos + currentElement)
 let somaNeg = negativos.reduce((somaNeg, currentElement) => somaNeg + currentElement)
 
